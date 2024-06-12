@@ -115,7 +115,7 @@ class Generator:
             Frequency = self.check_positive("frequency", function_type, ft_function)
         Amplitude = self.check_positive("amplitude", function_type, ft_function)
         if function_type == "sine":
-            self.sine(Frequency, Amplitude, ft_function) #TODO DLA ft inne wartości
+            self.sine(Frequency, Amplitude, ft_function)
         elif function_type == "square":
             self.square(Frequency, Amplitude, ft_function)
         elif function_type == "triangle":
