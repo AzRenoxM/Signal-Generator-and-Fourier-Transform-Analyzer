@@ -211,7 +211,7 @@ class Generator:
             xlim_value = int(input(f"Time range of the {function} function that you want to see(0-10 ms): "))
             if ((xlim_value <= 0) or (xlim_value > 10)): 
                 print("write the number between 0 and 10 ms")
-            if ((xlim_value > 0) and (xlim_value <= 5000)): #TODO Delete this fragment, this permits the user to put the time rage outiside of 0-10 ms
+            if ((xlim_value > 0) and (xlim_value <= 10)):
                 return xlim_value
             else:
                 print("unexpected error, rewrite the number from 0 to 10")
@@ -253,13 +253,3 @@ class Generator:
         time_vector = numpy.linspace(0, self.time_duration, self.time_duration*self.sampling)
         y_line = amplitude*(time_vector + numpy.random.rand(len(time_vector)))
         self.display_function(time_vector, y_line, "whiteNoise", ft_function, CSV_file, WAV_file)
-
-
-
-
-
-
-
-
-
-                
